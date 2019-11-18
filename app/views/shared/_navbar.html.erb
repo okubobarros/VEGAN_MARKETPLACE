@@ -11,6 +11,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
+<!--         <#% if current_user.is_chef %>
+          <p>Veja seus eventos</p>
+        <#% else %>
+          <p>Veja outros eventos</p>
+        <#% end %> -->
         <li class="nav-item active">
           <%= link_to "Home", "#", class: "nav-link" %>
         </li>
