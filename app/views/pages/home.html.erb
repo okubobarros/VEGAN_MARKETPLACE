@@ -1,6 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to "Edit", edit_user_registration_path, class: "nav-link" %>
+<% if user_signed_in? %>
+  <h1>Pages#home</h1>
+  <p>Find me in app/views/pages/home.html.erb</p>
 
-<%= cl_image_tag current_user.photo,  height: 300, width: 400, crop: :fill  %>
-
+<% else %>
+  <h1>aa</h1>
+<% end %>
