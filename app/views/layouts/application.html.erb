@@ -15,5 +15,44 @@
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+    <div class="navbar-header pull-left">
+        <a href="/" class="navbar-brand">LOGO</a>
+
+      </div>
+
+      <!-- 'Sticky' (non-collapsing) right-side menu item(s) -->
+      <div class="navbar-header pull-right">
+        <ul class="nav pull-left">
+          <!-- This works well for static text, like a username -->
+          <li class="navbar-text pull-left"><i class="fa fa-envelope fa-2x"></i></li>
+        </ul>
+
+        <!-- Required bootstrap placeholder for the collapsed menu -->
+        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      </div>
+
+      <!-- Fix to make collapsed appear below when visible via button -->
+      <div class="visible-xs-block clearfix"></div>
+
+      <!-- Collapsing section to the left -->
+      <div class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="#"><i class="fa fa-flag fa-2x"></i></a></li>
+        </ul>
+      </div>
+
+      <!-- Collapsing section to the right -->
+      <div class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li id="menu_home"><a class="nav" href="#"><i class="fa fa-home fw fa-2x"></i><span class="visible-xs-inline menu-xs-caption">Home</span></a></li>
+          <li id="menu_setup"><a class="nav" href="#"><i class="fa fa-cog fw fa-2x"></i><span class="visible-xs-inline menu-xs-caption">Settings</span></a></li>
+          <li id="menu_logout_li"><a class="nav" href="#"><i class="fa fa-power-off fa-2x"></i><span class="visible-xs-inline menu-xs-caption">Logout</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="alert alert-warning">We are but visitors on this rock, hurling through time and space at sixty-six thousand miles an hour.</div>
+  </div>
   </body>
 </html>
