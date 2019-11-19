@@ -12,7 +12,7 @@ class EventsController < ApplicationController
       render :edit
     end
   end
-
+  
   def new
     @event = Event.new
   end
@@ -27,6 +27,12 @@ class EventsController < ApplicationController
     end
   end
 
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    redirect_to event_path
+  end
+
   def show
     @event = Event.find(params[:id])
   end
@@ -38,3 +44,5 @@ class EventsController < ApplicationController
                                   :calendar, :type_of_event, :time, :limit_of_guest)
   end
 end
+
+
