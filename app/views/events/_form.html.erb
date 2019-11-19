@@ -1,0 +1,15 @@
+
+<div class="container">
+<%= simple_form_for(@event) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :calendar %>
+  <%= f.input :time %>
+  <%= f.input :address %>
+  <%= f.input :type_of_event %>
+  <%= f.input :type_of_meal %>
+  <%= f.input :limit_of_guest %>
+  <%= f.submit 'Create an Event', class: 'btn btn-flat' %>
+<% end %>
+<%= link_to "Back to menu", root_path %>
+</div>
