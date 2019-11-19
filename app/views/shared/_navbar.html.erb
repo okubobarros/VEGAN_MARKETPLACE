@@ -18,15 +18,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-      <li class="nav-item active">
-       </li>
-        <% if current_user.is_chef %>
-          <%= link_to "Veja seus eventos", "#", class: "nav-link" %>
-        <% else %>
-          <%= link_to "Veja outros eventos", "#", class: "nav-link" %>
-        <% end %>
-        </li>
+  
         <li class="nav-item active">
           <%= link_to "Home", "#", class: "nav-link" %>
         </li>
