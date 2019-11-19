@@ -1,4 +1,19 @@
 class EventsController < ApplicationController
+
+  def edit
+    @event = edit.find(params[:id])
+  end
+
+  def update
+    if @event.update(event_params)
+      redirect_to event_path(@event)
+    else
+      render :edit
+    end
+  end
+
+
+
   def new
     @event = Event.new
   end
@@ -18,4 +33,5 @@ class EventsController < ApplicationController
     params.require(:event).permit(:title, :description, :address, :type_of_meal,
                                   :calendar, :type_of_event, :time, :limit_of_guests)
   end
+
 end
