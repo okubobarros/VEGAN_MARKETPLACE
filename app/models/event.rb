@@ -1,8 +1,10 @@
 class Event < ApplicationRecord
   belongs_to :user
-  validates :description, presence: true
-  validates :title, presence: true
+  validates :description, presence: true, length: { minimum: 70 }
+  validates :title, presence: true, uniqueness: true
   validates :address, presence: true
+  validates :calendar, presence: true
+  validates :limit_of_guest, presence: true, numericality: { only_integer: true, greater_than: 0 }
   validates :type_of_meal, presence: true
   validates :type_of_event, presence: true, inclusion: { in: ['breakfast', 'lunch', 'dinner'] }
 end

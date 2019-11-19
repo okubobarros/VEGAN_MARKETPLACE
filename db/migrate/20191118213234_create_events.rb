@@ -7,9 +7,8 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :address
       t.string :type_of_meal
-      t.string :calendar
+      t.datetime :calendar
       t.string :type_of_event
-      t.string :time
 
       t.timestamps
     end

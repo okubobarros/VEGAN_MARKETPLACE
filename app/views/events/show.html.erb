@@ -1,5 +1,21 @@
+<div class="title">
+  <h1><%= @event.title %></h1>
+</div>
 
-<%= @event.title %>
+<div class="information">
+  <h4><%= @event.address %></h4>
+  <p><i class="far fa-clock"></i>Date: <%= @event.calendar.day %> / <%= @event.calendar.month %> / <%= @event.calendar.year %></p>
+<div class="row">
+  <p>
+  <i class="fas fa-utensils"></i>Type of event: <%= @event.type_of_event %> |
+  Cuisine type: <%= @event.type_of_meal %> |
+  Numbers of guests: <%= @event.limit_of_guest %>
+  </p>
+</div>
+<strong>A word about the experience:</strong>
+<p><%= @event.description %></p>
+</div>
 
 <%= link_to "Back to all", root_path %>
-<%= link_to "Edit this task", edit_event_path %>
+<%= link_to "Edit this event", edit_event_path %>
+
