@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-
   def edit
     @event = Event.find(params[:id])
   end
@@ -12,7 +11,7 @@ class EventsController < ApplicationController
       render :edit
     end
   end
-  
+
   def new
     @event = Event.new
   end
