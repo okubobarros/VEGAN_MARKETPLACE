@@ -1,1 +1,46 @@
-<%= @article.title %>
+<div class="container">
+  <div class="banner_show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1549047825-a81dc3f57c7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=639&q=80);">
+    <div class="container">
+      <h1><%= @event.title %></h1>
+    </div>
+  </div>
+</div>
+
+  <div class="information mt-3">
+    <h4>Address: <%= @event.address %></h4>
+    <p><i class="far fa-clock"></i> Date: <%= @event.calendar.day %> / <%= @event.calendar.month %> / <%= @event.calendar.year %></p>
+    <div class="row">
+      <div class="col-4">
+        <i class="fas fa-utensils"></i> Type of event: <%= @event.type_of_event %>
+      </div>
+      <div class="col-4">
+        <i class="fas fa-seedling"></i> Cuisine type: <%= @event.type_of_meal %>
+      </div>
+      <div class="col-4">
+        <i class="fas fa-users"></i> Numbers of guests: <%= @event.limit_of_guest %>
+      </div>
+    </div>
+    <div class="mt-3">
+      <strong>A word about the experience:</strong>
+    </div>
+    <p><%= @event.description %></p>
+  </div>
+
+  <%= link_to "Back to menu", root_path, class: 'btn btn-primary' %>
+  <%= link_to "Edit this event", edit_event_path, class: 'btn btn-primary' %>
+  <%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-primary' %>
+
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Vegan Place
+  </div>
+</div>
