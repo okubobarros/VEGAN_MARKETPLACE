@@ -14,3 +14,7 @@
 <% end %>
 <%= link_to "Back to menu", root_path %>
 </div>
+
+<%= link_to "Delete", event_path(event),
+  method: :delete,
+  data: { confirm: "Are you sure?" } %>
