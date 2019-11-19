@@ -20,7 +20,7 @@ class EventsController < ApplicationController
       render :edit
     end
   end
- 
+
   def new
     @event = Event.new
   end
@@ -38,7 +38,7 @@ class EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to event_path
+    redirect_to root_path
   end
 
   def show
@@ -49,7 +49,7 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:title, :description, :address, :type_of_meal,
-                                  :calendar, :type_of_event, :time, :limit_of_guest)
+                                  :calendar, :type_of_event, :limit_of_guest)
   end
 end
 
