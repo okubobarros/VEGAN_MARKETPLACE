@@ -6,5 +6,5 @@ class Event < ApplicationRecord
   validates :calendar, presence: true
   validates :limit_of_guest, presence: true, numericality: { only_integer: true, greater_than: 0 }
   validates :type_of_meal, presence: true
-  validates :type_of_event, presence: true, inclusion: { in: ['breakfast', 'lunch', 'dinner'] }
+  validates :type_of_event, presence: true, inclusion: { in: ['Breakfast', 'Lunch', 'Dinner'] }
 end

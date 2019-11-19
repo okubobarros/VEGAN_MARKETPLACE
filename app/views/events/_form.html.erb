@@ -5,10 +5,10 @@
     <%= f.input :description, label: 'Information about your menu:' %>
     <%= f.input :calendar, label: 'Date:', as: :datetime %>
     <%= f.input :address %>
-    <%= f.input :type_of_event %>
-    <%= f.input :type_of_meal, label: 'Type of cuisine' %>
-    <%= f.input :limit_of_guest %>
+    <%= f.input :type_of_event, collection: ['Breakfast', 'Lunch', 'Dinner'] %>
+    <%= f.input :type_of_meal, label: 'Type of cuisine', collection: ['Italian', 'Indian', 'Japanese'] %>
+    <%= f.input :limit_of_guest, label: 'Maximum of guests:' %>
     <%= f.submit 'Create an Event', class: 'btn btn-primary' %>
   <% end %>
-<%= link_to "Back to menu", root_path %>
+<%= link_to "Back to menu", root_path, class: 'btn btn-primary' %>
 </div>
