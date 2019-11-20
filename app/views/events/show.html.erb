@@ -9,7 +9,8 @@
 <div class="container">
   <div class="information mt-3">
     <h4>Address: <%= @event.address %></h4>
-    <p><i class="far fa-clock"></i> Date: <%= @event.calendar.day %> / <%= @event.calendar.month %> / <%= @event.calendar.year %></p>
+    <p><i class="far fa-calendar-alt"></i> Date: <%= @event.calendar.day %> / <%= @event.calendar.month %> / <%= @event.calendar.year %></p>
+    <p><i class="far fa-clock"></i> Time: <%= @event.calendar.hour %>h <%#= @event.calendar.minutes %>
     <div class="row">
       <div class="col-4">
         <i class="fas fa-utensils"></i> Type of event: <%= @event.type_of_event %>
