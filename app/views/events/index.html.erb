@@ -1,21 +1,21 @@
-<% @events.each do |event| %>
-  <%= event.title %>
-<% end %>
+  <div class="container">
+  <h2>Your search results:</h2>
+  </div>
 
 <div class="container events_index">
-  <div class="row">
-  <% @events.each do |event| %>
+    <div class="row">
+      <% @events.each do |event| %>
     <div class="col-4">
-      <div class="card ml-5 mb-3" style="width: 18rem;">
-        <img src="https://image.flaticon.com/icons/svg/1400/1400260.svg" class="card-img-top">
+      <div class="card mb-5" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1528712306091-ed0763094c98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top">
+      <div class="price">$ <%= event.price %></div>
       <div class="card-body">
-      <h5 class="card-title"><%= event.title %></h5>
-      <p class="card-text"><%= event.description %></p>
-      <%= link_to "More details", event, class: "btn btn-primary" %>
+        <h5 class="card-title"><%= event.type_of_event %> - <%= event.type_of_meal %></h5>
+        <p class="card-text"><%= event.title %></p>
+        <%= link_to "More details", event, class: "btn btn-flat btn-details" %>
       </div>
       </div>
     </div>
   <% end %>
   </div>
 </div>
-
