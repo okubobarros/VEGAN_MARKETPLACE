@@ -1,9 +1,10 @@
 class EventsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     if params[:query].present?
        sql_query = "title ILIKE :query OR address ILIKE :query"
-       @events = Event.where(sql_query, query: "%#{params[:query]}%")
+       @events = Event.where(sql_query, query: "%#{params[:query]}%") 
     else
       @events = Event.all
     end
