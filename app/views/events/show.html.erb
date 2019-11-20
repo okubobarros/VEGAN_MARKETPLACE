@@ -6,6 +6,7 @@
   </div>
 </div>
 
+<div class="container">
   <div class="information mt-3">
     <h4>Address: <%= @event.address %></h4>
     <p><i class="far fa-clock"></i> Date: <%= @event.calendar.day %> / <%= @event.calendar.month %> / <%= @event.calendar.year %></p>
@@ -29,7 +30,7 @@
   <%= link_to "Back to menu", root_path, class: 'btn btn-primary' %>
   <%= link_to "Edit this event", edit_event_path, class: 'btn btn-primary' %>
   <%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-primary' %>
-
+</div>
 </div>
 
 <div class="footer">
