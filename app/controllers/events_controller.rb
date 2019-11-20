@@ -30,6 +30,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.user = current_user
+
     if @event.save
       redirect_to event_path(@event)
     else
@@ -51,7 +52,7 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:title, :description, :address, :type_of_meal,
-                                  :calendar, :type_of_event, :limit_of_guest)
+                                  :calendar, :type_of_event, :limit_of_guest, :price)
   end
 end
 

@@ -2,7 +2,7 @@
 <!-- Banner & Search -->
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1530541873326-1e70f0e1502b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
   <div class="searchFormContainer">
-    <h1>Book unforgettable vegan experiences!</h1>
+    <h1>Book unforgettable <span style="color:#20b286">vegan</span> experiences!</h1>
     <p>Join experiences with the main plant based chefs around.</p>
   </div>
   <div class="form-home">
@@ -26,31 +26,16 @@
   <div class="row">
   <% @events.each do |event| %>
     <div class="col-4">
-      <div class="card ml-5 mb-3" style="width: 18rem;">
-        <img src="https://image.flaticon.com/icons/svg/1400/1400260.svg" class="card-img-top">
+      <div class="card ml-5 mb-5" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1528712306091-ed0763094c98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top">
+      <div class="price">$ <%= event.price %></div>
       <div class="card-body">
-      <h5 class="card-title"><%= event.title %></h5>
-      <p class="card-text"><%= event.description %></p>
-      <%= link_to "More details", event, class: "btn btn-primary" %>
+        <h5 class="card-title"><%= event.type_of_event %> - <%= event.type_of_meal %></h5>
+        <p class="card-text"><%= event.title %></p>
+        <%= link_to "More details", event, class: "btn btn-flat btn-details" %>
       </div>
       </div>
     </div>
   <% end %>
   </div>
 </div>
-
-<!-- Footer -->
-
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Vegan Place
-  </div>
-</div>
-

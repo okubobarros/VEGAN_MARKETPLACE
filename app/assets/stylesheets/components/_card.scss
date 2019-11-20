@@ -13,6 +13,10 @@
   object-fit: cover;
 }
 
+.card-img-top {
+  height: 16rem;
+}
+
 .card-product h2 {
   font-size: 16px;
   font-weight: bold;
@@ -33,4 +37,38 @@
 
 .events_index {
   display: flex;
+}
+
+.card-body{
+  position: relative;
+  height: 11rem;
+}
+
+.btn-details {
+ position: absolute;
+ bottom: 18px;
+}
+
+.card {
+  position: relative;
+}
+
+.price {
+  position: absolute;
+  right: 20px;
+  bottom: 200px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.card-title {
+  color: #147155;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #3D3D38;
+  font-weight: 500;
 }
