@@ -19,8 +19,9 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
+        <li class="nav-item active row">
+          <%= link_to "Add a new event", new_event_path, class: "nav-link" %>
+          <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <% if current_user.photo? %>
@@ -36,8 +37,9 @@
           </div>
         </li>
       <% else %>
-        <li class="nav-item">
+        <li class="nav-item row">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Sign up", new_user_registration_path, class: "nav-link btn btn-primary" %>
         </li>
       <% end %>
     </ul>
