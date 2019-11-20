@@ -33,3 +33,21 @@
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
+
+.formHome {
+ position: relative;
+}
+
+.form-search {
+  display:flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 30%;
+
+}
+
+.btn-search {
+  margin-left: 10px;
+}
