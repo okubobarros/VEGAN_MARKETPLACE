@@ -1,12 +1,13 @@
 class EventsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
-  # def index
-  #   if params[:query].present?
-  #     @events = Event.where("address ILIKE ?", "%#{params[:query]}%")
-  #   else
-  #     @events = Event.all
-  #   end
-  # end
+  def index
+    if params[:query].present?
+      @events = Event.where("address ILIKE ?", "%#{params[:query]}%")
+    else
+      @events = Event.all
+    end
+  end
 
   def edit
     @event = Event.find(params[:id])
