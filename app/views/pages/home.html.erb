@@ -5,20 +5,14 @@
     <h1>Book unforgettable vegan experiences!</h1>
     <p>Join experiences with the main plant based chefs around.</p>
   </div>
-  <div class="form">
-	<form>
-	  <div class="form-row align-items-center">
-	    <div class="col">
-	      <input type="text" class="form-control" placeholder="Select city or host">
-	    </div>
-	    <div class="col">
-	      <input type="text" class="form-control datepicker" placeholder="Select a date">
-	    </div>
-	    <div class="col">
-	      <input type="text" class="form-control" placeholder="Guests">
-	    </div>
-	    <div class="col">
-	    	<input type="submit" name="submit" value="Search" class="btn btn-primary btn-block">
+  <div class="form-home">
+	   <%= form_tag events_path, class: "form-search",  method: :get do %>
+       <%= text_field_tag :query,
+           params[:address],
+          class: "form-control search-input",
+          placeholder: "Search address"  %>
+        <%= submit_tag "Search", class: "btn btn-primary btn-search" %>
+      <% end %>
 	    </div>
 	  </div>
 	</form>
