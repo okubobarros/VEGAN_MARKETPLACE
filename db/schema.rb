@@ -22,8 +22,9 @@ ActiveRecord::Schema.define(version: 2019_11_20_142913) do
     t.string "title"
     t.string "address"
     t.string "type_of_meal"
-    t.datetime "calendar"
+    t.string "calendar"
     t.string "type_of_event"
+    t.string "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price"
