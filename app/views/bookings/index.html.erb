@@ -9,9 +9,9 @@
         <h5 class="card-title"><%= booking.event.type_of_event %> - <%= booking.event.type_of_meal %></h5>
         <p class="card-text"><%= booking.event.title %></p>
         <%= link_to "More details", booking.event, class: "btn btn-flat" %>
-        <%= link_to "Delete", booking, method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-primary' %>
+        <%= link_to "Delete", booking, method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-danger' %>
       </div>
       </div>
-    </div>  
+    </div>
 <% end %>
  </div>

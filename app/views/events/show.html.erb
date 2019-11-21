@@ -17,17 +17,17 @@
             <i class="fas fa-utensils"></i> Type of event: <%= @event.type_of_event %>
           </div>
           <div class="col-4">
-            <i class="fas fa-seedling"></i> Cuisine type: <%= @event.type_of_meal %>
+            <span style="color:green"><i class="fas fa-seedling"></i></span> Cuisine type: <%= @event.type_of_meal %>
           </div>
           <div class="col-4">
-            <i class="fas fa-users"></i> Numbers of guests: <%= @event.limit_of_guest %>
+            <span style="color:#1e90ff"><i class="fas fa-users"></i></span> Numbers of guests: <%= @event.limit_of_guest %>
           </div>
         </div>
         <div class="mt-3">
           <strong>A word about the experience:</strong>
         </div>
         <p><%= @event.description %></p>
-      <%= link_to "Back to menu", root_path, class: 'btn btn-primary' %>
+      <%= link_to "Back to home", root_path, class: 'btn btn-primary' %>
       <%= link_to "Edit this event", edit_event_path, class: 'btn btn-primary' %>
       <%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-primary' %>
     </div>
