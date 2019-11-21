@@ -45,8 +45,6 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    current_user ? @user = current_user : @event
-    @event_booking
   end
 
   # def event_booking
