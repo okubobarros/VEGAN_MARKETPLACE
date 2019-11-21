@@ -39,25 +39,5 @@
         <%= f.submit "BOOK NOW", class: "btn btn-flat btn btn-block" %>
         <% end %>
       </div>
-    </div>
-    <p><%= @event.description %></p>
-  </div>
-
-  <%= link_to "Back to menu", root_path, class: 'btn btn-primary' %>
-  <%= link_to "Edit this event", edit_event_path, class: 'btn btn-primary' %>
-  <%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-primary' %>
 </div>
 </div>
-
-<!-- Booking form -->
-
-<div class="container">
-  <%= simple_form_for [@event, @booking] do |f| %>
-    <div class="form-inputs mt-3 offset-3 col-6">
-      <h2>Book your event:</h2>
-    <%= f.input :number_of_guests %>
-    <%= f.submit 'Book now', class: 'btn btn-primary btn-block' %>
-  <% end %>
-  </div>
-</div>
-

@@ -1,11 +1,11 @@
 class BookingsController < ApplicationController
-
   def index
-    if params[:user_id].present? && params([:number_of_guests]) <= @event.number_of_guests
-      @bookings = Booking.where(user: params[:user_id])
-    else
-      redirect_to root_path
-    end
+    @bookings = current_user.bookings
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+    @event = @booking.event
   end
 
   def create
@@ -14,7 +14,13 @@ class BookingsController < ApplicationController
     @booking.event = @event
     @booking.user_id = current_user.id
     @booking.save!
-    redirect_to event_path(@event)
+    redirect_to booking_path(@booking)
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to root_path
   end
 
   private
