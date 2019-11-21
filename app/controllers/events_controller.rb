@@ -45,17 +45,8 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @booking = Booking.new
   end
-
-  # def event_booking
-  #   @event = Event.find(params[:id])
-  #   @booking = Booking.new()
-  #   if @event.bookings == current_user
-  #     Booking.create!(:email, @event_id)
-  #   else
-
-  #   end
-  # end
 
   private
 
