@@ -7,8 +7,8 @@
 </div>
 
 <div class="container">
-  <div class="information mt-3">
-    <h4>Address: <%= @event.address %></h4>
+  <div class="information mt-4">
+    <h4><span style="color:red"><i class="fas fa-map-marker-alt"></i></span> Address: <%= @event.address %></h4>
     <p><i class="far fa-calendar-alt"></i> Date: <%= @event.calendar.day %> / <%= @event.calendar.month %> / <%= @event.calendar.year %></p>
     <p><i class="far fa-clock"></i> Time: <%= @event.calendar.hour %>h <%#= @event.calendar.minutes %>
     <div class="row">

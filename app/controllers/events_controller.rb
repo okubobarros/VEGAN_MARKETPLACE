@@ -3,8 +3,8 @@ class EventsController < ApplicationController
 
   def index
     if params[:query].present?
-       sql_query = "title ILIKE :query OR address ILIKE :query OR type_of_meal ILIKE :query OR type_of_event ILIKE :query"
-       @events = Event.where(sql_query, query: "%#{params[:query]}%")
+      sql_query = "title ILIKE :query OR address ILIKE :query OR type_of_meal ILIKE :query OR type_of_event ILIKE :query"
+      @events = Event.where(sql_query, query: "%#{params[:query]}%")
     else
       @events = Event.all
     end
