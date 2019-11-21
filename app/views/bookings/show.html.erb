@@ -1,9 +1,11 @@
-<%= @booking.event.title %>
-
+<div class="container"></div>
+<h1>Congratulations you have successfully booked this event!</h1>
+<h2>See the details below:</h2>
+</div>
 
 <div class="container"></div>
   <div class="information mt-4 w-7">
-  <%= @booking.event.title %>
+  <h2><%= @booking.event.title %></h2>
     <h4><span style="color:red"><i class="fas fa-map-marker-alt"></i></span> Address: <%= @booking.event.address %></h4>
     <p><i class="far fa-calendar-alt"></i> Date: <%= @booking.event.calendar.day %> / <%= @booking.event.calendar.month %> / <%= @booking.event.calendar.year %></p>
     <p><i class="far fa-clock"></i> Time: <%= @booking.event.calendar.hour %>h<%= @booking.event.calendar.strftime("%M") %></p>
@@ -22,4 +24,5 @@
           <strong>A word about the experience:</strong>
         </div>
         <p><%= @booking.event.description %></p>
+  </div>
 </div>
