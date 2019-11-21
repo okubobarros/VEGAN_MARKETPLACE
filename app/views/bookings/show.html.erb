@@ -1,2 +1,28 @@
-<%= @booking.event %>
-
+<div class="container p-5">
+<h2>Congratulations you have successfully booked this event!</h2>
+<h3>See the details below:</h3>
+  <div class="information mt-4">
+    <p class="mb-0"><strong><%= @booking.number_of_guests %> guests</strong> x $<%= @booking.event.price %> <span style="color:grey; font-size:13px"> price per guest</span></p>
+    <p class="mb-0">TOTAL: <strong>$<%= @booking.event.price * @booking.number_of_guests %></p></strong>
+    <p><span style="color:#A9E7C8"><i class="far fa-check-circle"></i></span> <em><span style="color:grey; font-size:14px">Free cancellation up to 2 days before the event.</em></span></p>
+    <div class="booking-title border-bottom">
+     <h2><%= @booking.event.title %></h2>
+    </div>
+  <div class="details mt-4">
+    <h4><span style="color:red"><i class="fas fa-map-marker-alt"></i></span> Address: <%= @booking.event.address %></h4>
+    <p><i class="far fa-calendar-alt"></i> Date: <%= @booking.event.calendar.day %> / <%= @booking.event.calendar.month %> / <%= @booking.event.calendar.year %></p>
+    <p><i class="far fa-clock"></i> Time: <%= @booking.event.calendar.hour %>h<%= @booking.event.calendar.strftime("%M") %></p>
+      <div class="row">
+        <div class="col-4">
+          <i class="fas fa-utensils"></i> Type of event: <%= @booking.event.type_of_event %>
+        </div>
+        <div class="col-4">
+          <span style="color:green"><i class="fas fa-seedling"></i></span> Cuisine type: <%= @booking.event.type_of_meal %>
+        </div>
+        <div class="col-4">
+          <span style="color:#1e90ff"><i class="fas fa-users"></i></span> Numbers of guests: <%= @booking.event.limit_of_guest %>
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
