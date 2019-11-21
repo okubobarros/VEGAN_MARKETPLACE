@@ -31,13 +31,17 @@
       <%= link_to "Edit this event", edit_event_path, class: 'btn btn-primary' %>
       <%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-primary' %>
     </div>
+    <% if @event.bookings.sum {|booking| booking.number_of_guests} < @event.limit_of_guest %>
     <div class="booking-form bg-white p-3 mt-4 w-25">
       <h2>Book this event:</h2>
       <p>$<%= @event.price %><span style="color:grey; font-size:13px"> Price per guest</span></p>
       <%= simple_form_for [@event, @booking] do |f| %>
-        <%= f.input :number_of_guests, label: 'Number of guests:', collection: (1..@event.limit_of_guest), label_method: -> (obj) { "#{obj} guests" } %>
+        <%= f.input :number_of_guests, label: 'Number of guests:', collection: (1..@event.limit_of_guest - @event.bookings.sum {|booking| booking.number_of_guests}), label_method: -> (obj) { "#{obj} guests" } %>
         <%= f.submit "BOOK NOW", class: "btn btn-flat btn btn-block" %>
-        <% end %>
-      </div>
+      <% end %>
+    </div>
+    <% else %>
+    <h1> Lotado!!!! </h1>
+    <% end %>
 </div>
 </div>

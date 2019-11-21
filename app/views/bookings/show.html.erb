@@ -1,2 +1,25 @@
-<%= @booking.event %>
+<%= @booking.event.title %>
 
+
+<div class="container"></div>
+  <div class="information mt-4 w-7">
+  <%= @booking.event.title %>
+    <h4><span style="color:red"><i class="fas fa-map-marker-alt"></i></span> Address: <%= @booking.event.address %></h4>
+    <p><i class="far fa-calendar-alt"></i> Date: <%= @booking.event.calendar.day %> / <%= @booking.event.calendar.month %> / <%= @booking.event.calendar.year %></p>
+    <p><i class="far fa-clock"></i> Time: <%= @booking.event.calendar.hour %>h<%= @booking.event.calendar.strftime("%M") %></p>
+      <div class="row">
+        <div class="col-4">
+          <i class="fas fa-utensils"></i> Type of event: <%= @booking.event.type_of_event %>
+        </div>
+        <div class="col-4">
+          <i class="fas fa-seedling"></i> Cuisine type: <%= @booking.event.type_of_meal %>
+        </div>
+        <div class="col-4">
+          <i class="fas fa-users"></i> Numbers of guests: <%= @booking.event.limit_of_guest %>
+        </div>
+      </div>
+        <div class="mt-3">
+          <strong>A word about the experience:</strong>
+        </div>
+        <p><%= @booking.event.description %></p>
+</div>
