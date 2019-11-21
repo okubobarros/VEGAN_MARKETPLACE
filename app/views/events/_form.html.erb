@@ -7,7 +7,7 @@
     <%= f.input :calendar, label: 'Date:', as: :datetime %>
     <%= f.input :address %>
     <%= f.input :type_of_event, collection: ['Breakfast', 'Lunch', 'Dinner'] %>
-    <%= f.input :type_of_meal, label: 'Type of cuisine', collection: ['Italian', 'Indian', 'Japanese'] %>
+    <%= f.input :type_of_meal, label: 'Type of cuisine', collection: ['Italian', 'Indian', 'Japanese', 'Hawaiian', 'Brazilian', "Korean", "Thai"] %>
     <%= f.input :limit_of_guest, label: 'Maximum of guests:' %>
     <%= f.input :price, label: 'Price per person:' %>
     <%= f.submit 'Create an Event', class: 'btn btn-primary btn-block' %>
