@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_20_142913) do
+ActiveRecord::Schema.define(version: 2019_11_21_195850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "number_of_guests"
+    t.bigint "user_id"
+    t.bigint "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_bookings_on_event_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
 
   create_table "events", force: :cascade do |t|
     t.text "description"
@@ -22,12 +32,12 @@ ActiveRecord::Schema.define(version: 2019_11_20_142913) do
     t.string "title"
     t.string "address"
     t.string "type_of_meal"
-    t.string "calendar"
+    t.datetime "calendar"
     t.string "type_of_event"
-    t.string "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price"
+    t.string "photo"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -46,5 +56,7 @@ ActiveRecord::Schema.define(version: 2019_11_20_142913) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "events"
+  add_foreign_key "bookings", "users"
   add_foreign_key "events", "users"
 end

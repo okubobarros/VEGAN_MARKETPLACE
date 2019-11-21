@@ -1,7 +1,7 @@
-# User.destroy_all
-# Event.destroy_all
+User.destroy_all
+Event.destroy_all
 
-# user = User.create!(first_name: "Cesar", last_name: "User", email: "teste@teste.com", password: "123456",)
+user = User.create!(first_name: "Cesar", last_name: "User", email: "teste@teste.com", password: "123456",)
 
 # Event.create!(user: user, description: "Enjoy an Arabian dinner while in a magic carpet", title: "Arabian Nights",
 # 	address: "Arabia", type_of_meal: "Arabian", type_of_event: "dinner")

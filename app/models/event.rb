@@ -1,5 +1,10 @@
 class Event < ApplicationRecord
+
   belongs_to :user
+  has_many :bookings
+
+  mount_uploader :photo, PhotoUploader
+
   validates :description, presence: true, length: { minimum: 70 }
   validates :title, presence: true, uniqueness: true
   validates :address, presence: true

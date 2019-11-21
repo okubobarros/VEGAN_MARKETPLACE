@@ -5,6 +5,10 @@ class EventsController < ApplicationController
     if params[:query].present?
       sql_query = "title ILIKE :query OR address ILIKE :query OR type_of_meal ILIKE :query OR type_of_event ILIKE :query"
       @events = Event.where(sql_query, query: "%#{params[:query]}%").page(params[:page]).per(3)
+       sql_query = "title ILIKE :query OR address ILIKE :query OR type_of_meal ILIKE :query OR type_of_event ILIKE :query"
+       @events = Event.where(sql_query, query: "%#{params[:query]}%").page(params[:page]).per(10)
+      sql_query = "title ILIKE :query OR address ILIKE :query OR type_of_meal ILIKE :query OR type_of_event ILIKE :query"
+      @events = Event.where(sql_query, query: "%#{params[:query]}%")
     else
       @events = Event.all.page(params[:page]).per(3)
     end
@@ -30,7 +34,6 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.user = current_user
-
     if @event.save
       redirect_to event_path(@event)
     else
@@ -46,13 +49,14 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @booking = Booking.new
   end
 
   private
 
   def event_params
     params.require(:event).permit(:title, :description, :address, :type_of_meal,
-                                  :calendar, :type_of_event, :limit_of_guest, :price)
+                                  :calendar, :type_of_event, :limit_of_guest, :price, :photo)
   end
 end
 
