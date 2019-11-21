@@ -1,0 +1,14 @@
+<% @bookings.each do |booking| %>
+<% event = Event.where(id: booking.event_id).first %>
+<div class="col-4">
+      <div class="card mb-5" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1528712306091-ed0763094c98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top">
+      <div class="price">$ <%= event.price %></div>
+      <div class="card-body">
+        <h5 class="card-title"><%= event.type_of_event %> - <%= event.type_of_meal %></h5>
+        <p class="card-text"><%= event.title %></p>
+        <%= link_to "More details", event, class: "btn btn-flat btn-details" %>
+      </div>
+      </div>
+    </div>
+<% end %>
