@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
   belongs_to :user
+  has_many :bookings
   validates :description, presence: true, length: { minimum: 70 }
   validates :title, presence: true, uniqueness: true
   validates :address, presence: true
