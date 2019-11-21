@@ -3,5 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @events = Event.all
+    # @events = Event.order(:title).page params[:page]
   end
 end
