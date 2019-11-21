@@ -2,7 +2,6 @@
 <h1>My Bookings <i class="fas fa-seedling"></i></h1>
 </div>
 
-
 <div class="containerMyBook">
 <div class="row p-3">
 	<% @bookings.each do |booking| %>
@@ -14,7 +13,7 @@
         <h5 class="card-title"><%= booking.event.type_of_event %> - <%= booking.event.type_of_meal %></h5>
         <p class="card-text"><%= booking.event.title %></p>
         <%= link_to "More details", booking.event, class: "btn btn-flat" %>
-        <%= link_to "Cancel", booking, method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-primary' %>
+        <%= link_to "Cancel", booking, method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-danger' %>
       </div>
       </div>
     </div>
