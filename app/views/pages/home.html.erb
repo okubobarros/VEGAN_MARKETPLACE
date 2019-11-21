@@ -25,7 +25,7 @@
 <div class="container events_index">
   <!-- <div class="row card-row"> -->
   <% @events.each do |event| %>
-    <div class="col">
+    <div class="col d-flex justify-content-center">
       <div class="card ml-5 mb-5" style="width: 18rem;">
         <img src="https://images.unsplash.com/photo-1528712306091-ed0763094c98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top">
       <div class="price">$ <%= event.price %></div>
@@ -42,48 +42,49 @@
   <%= link_to "More events", events_path, class: "btn btn-flat d-flex justify-content-center w-25 m-auto" %>
   </div>
 <!-- How it works -->
-
-<div class="card ml-5 mb-5 text-center" style="width: 75rem;">
-  <div class="DashboardContainer text-center">
-    <h2 class="title-home mb-5 border-bottom "><span style="color:#20b286">Discover & Enjoy Social Eating</span></h2>
-    <div class="Grid row">
-      <div class='col-4'>
-        <i class="fas fa-search-location" style="font-size:64px"></i>
-        <h2 class="subtitle">Discover</h2>
-        <p>Explore thousands of delicious <span style="color:#20b286">vegan</span> food experiences around the world. Once you have chosen your destination...</p>
-      </div>
-      <div class="col-4">
-        <i class="fas fa-calendar-day" style="font-size:64px"></i>
-        <h2 class="subtitle">Book</h2>
-        <p>Once you’ve made your choice, you simply need to select the dates you are available and click “Request to book”...</p>
-      </div>
-      <div class="col-4">
-        <i class="far fa-star" style="font-size:64px"></i>
-        <h2 class="subtitle">Review</h2>
-        <p>It’s time to enjoy your Eatgreen experience! Your selected host is waiting to meet you and share their food story...</p>
+<div class="how-it-works">
+  <div class="card ml-5 mb-5 text-center" style="width: 75rem;">
+    <div class="DashboardContainer text-center">
+      <h2 class="title-home mb-5 border-bottom "><span style="color:#20b286">Discover & Enjoy Social Eating</span></h2>
+      <div class="Grid row">
+        <div class='col-4'>
+          <i class="fas fa-search-location" style="font-size:64px"></i>
+          <h2 class="subtitle">Discover</h2>
+          <p>Explore thousands of delicious <span style="color:#20b286">vegan</span> food experiences around the world. Once you have chosen your destination...</p>
+        </div>
+        <div class="col-4">
+          <i class="fas fa-calendar-day" style="font-size:64px"></i>
+          <h2 class="subtitle">Book</h2>
+          <p>Once you’ve made your choice, you simply need to select the dates you are available and click “Request to book”...</p>
+        </div>
+        <div class="col-4">
+          <i class="far fa-star" style="font-size:64px"></i>
+          <h2 class="subtitle">Review</h2>
+          <p>It’s time to enjoy your Eatgreen experience! Your selected host is waiting to meet you and share their food story...</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="card ml-5 mb-5 text-center" style="width: 75rem;">
-  <div class="DashboardContainer text-center">
-    <h2 class="title-home border-bottom"><span style="color:#20b286">I'm a Chef - How to Post Food Events</span></h2>
-    <div class="Grid row">
-      <div class='col-4'>
-        <i class="far fa-newspaper" style="font-size:64px"></i>
-        <h2 class="subtitle">Offer</h2>
-        <p>Want to share your passion for food with people from all over the world? Well you’ve come to the right place!...</p>
-      </div>
-      <div class="col-4">
-        <i class="fas fa-tasks" style="font-size:64px"></i>
-        <h2 class="subtitle">Manage</h2>
-       <p>Once you start hosting, it’s easy to manage requests and confirm reservations with guests from around the world...</p>
-      </div>
-      <div class="col-4">
-        <i class="fas fa-hat-wizard" style="font-size:64px"></i>
-        <h2 class="subtitle">Welcome</h2>
-        <p>The big moment is finally here! It’s time to share your food and passion with your guests. We guarantee you’ll enjoy...</p>
+  <div class="card ml-5 mb-5 text-center" style="width: 75rem;">
+    <div class="DashboardContainer text-center">
+      <h2 class="title-home border-bottom"><span style="color:#20b286">I'm a Chef - How to Post Food Events</span></h2>
+      <div class="Grid row">
+        <div class='col-4'>
+          <i class="far fa-newspaper" style="font-size:64px"></i>
+          <h2 class="subtitle">Offer</h2>
+          <p>Want to share your passion for food with people from all over the world? Well you’ve come to the right place!...</p>
+        </div>
+        <div class="col-4">
+          <i class="fas fa-tasks" style="font-size:64px"></i>
+          <h2 class="subtitle">Manage</h2>
+         <p>Once you start hosting, it’s easy to manage requests and confirm reservations with guests from around the world...</p>
+        </div>
+        <div class="col-4">
+          <i class="fas fa-hat-wizard" style="font-size:64px"></i>
+          <h2 class="subtitle">Welcome</h2>
+          <p>The big moment is finally here! It’s time to share your food and passion with your guests. We guarantee you’ll enjoy...</p>
+        </div>
       </div>
     </div>
   </div>
