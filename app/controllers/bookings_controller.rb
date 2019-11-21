@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   def index
     if params[:user_id].present? && params([:number_of_guests]) <= @event.number_of_guests
       @bookings = Booking.where(user: params[:user_id])
