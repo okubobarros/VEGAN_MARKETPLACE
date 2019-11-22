@@ -27,9 +27,9 @@
           <strong>A word about the experience:</strong>
         </div>
         <p><%= @event.description %></p>
-      <%= link_to "Back to home", root_path, class: 'btn btn-primary' %>
-      <%= link_to "Edit this event", edit_event_path, class: 'btn btn-primary' %>
-      <%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-primary' %>
+      <%= link_to "Back to home", root_path, class: 'btn btn-primary rounded-lg' %>
+      <%= link_to "Edit this event", edit_event_path, class: 'btn btn-secondary rounded-lg' %>
+      <%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-danger rounded-lg' %>
     </div>
     <% if @event.bookings.sum {|booking| booking.number_of_guests} < @event.limit_of_guest %>
     <div class="booking-form bg-white p-3 mt-4 w-25">
