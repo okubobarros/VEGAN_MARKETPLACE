@@ -4,7 +4,7 @@ class Event < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
-  validates :description, presence: true, length: { minimum: 70 }
+  validates :description, presence: true, length: { minimum: 5 }
   validates :title, presence: true, uniqueness: true
   validates :address, presence: true
   validates :calendar, presence: true
