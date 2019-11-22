@@ -1,7 +1,6 @@
 <div class="container">
   <%= simple_form_for(@event) do |f| %>
     <div class="form-inputs mt-3 offset-3 col-6">
-      <h2>Create your event:</h2>
     <%= f.input :title %>
     <%= f.input :description, label: 'Information about your menu:' %>
     <%= f.input :calendar, label: 'Date:', as: :datetime %>
@@ -12,7 +11,7 @@
     <%= f.input :price, label: 'Price per person:' %>
     <%= f.input :photo %>
     <%= f.input :photo_cache, as: :hidden %>
-    <%= f.submit 'Create an Event', class: 'btn btn-primary btn-block' %>
+    <%= f.submit 'Send', class: 'btn btn-primary btn-block' %>
   <% end %>
   </div>
 </div>

@@ -57,5 +57,3 @@ class EventsController < ApplicationController
                                   :calendar, :type_of_event, :limit_of_guest, :price, :photo)
   end
 end
-
-
