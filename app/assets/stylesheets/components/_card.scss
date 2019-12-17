@@ -1,8 +1,13 @@
+.card {
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
 .card-product {
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
 }
@@ -49,10 +54,6 @@
  bottom: 18px;
 }
 
-.card {
-  position: relative;
-}
-
 .price {
   position: absolute;
   right: 20px;
@@ -79,5 +80,6 @@
 
 .img-card-top {
   height: 30vh;
+  border-radius: 8px 8px 0px 0px;
   object-fit: cover;
 }
